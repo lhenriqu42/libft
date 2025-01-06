@@ -6,7 +6,7 @@
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 10:28:40 by lhenriqu          #+#    #+#             */
-/*   Updated: 2024/11/29 12:45:33 by lhenriqu         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:04:19 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ static char *get_rest(char *buffer);
 
 char *get_next_line(int fd)
 {
-	static char *buffer;
+	static char *buffer[1024];
 	char *line;
 
 	if (BUFFER_SIZE <= 0 || fd < 0)
 		return (NULL);
-	buffer = ft_read(fd, buffer);
-	if (buffer == NULL)
+	buffer[fd] = ft_read(fd, buffer[fd]);
+	if (buffer[fd] == NULL)
 		return (NULL);
 	line = NULL;
-	line = get_line(buffer);
-	buffer = get_rest(buffer);
+	line = get_line(buffer[fd]);
+	buffer[fd] = get_rest(buffer[fd]);
 	return (line);
 }
 
