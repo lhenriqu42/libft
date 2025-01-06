@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   string_functions.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 20:03:52 by lhenriqu          #+#    #+#             */
-/*   Updated: 2024/10/15 21:35:36 by lhenriqu         ###   ########.fr       */
+/*   Created: 2024/11/21 17:36:04 by lhenriqu          #+#    #+#             */
+/*   Updated: 2024/12/30 12:45:05 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-t_list	*ft_lstnew(void *content)
+size_t ft_putchar(char c)
 {
-	t_list	*new;
+	write(1, &c, 1);
+	return (1);
+}
 
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+size_t ft_putstr(char *str)
+{
+	int len;
+
+	if (str == NULL)
+		return (ft_putstr("(null)"));
+	len = 0;
+	while (str[len])
+		len++;
+	write(1, str, len);
+	return (len);
 }

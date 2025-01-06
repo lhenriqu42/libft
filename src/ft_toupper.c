@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 20:34:26 by lhenriqu          #+#    #+#             */
-/*   Updated: 2024/10/15 21:35:13 by lhenriqu         ###   ########.fr       */
+/*   Created: 2024/10/11 14:55:28 by lhenriqu          #+#    #+#             */
+/*   Updated: 2024/11/29 12:13:43 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+int	ft_toupper(int c)
 {
-	if (!lst)
-		return ;
-	del(lst->content);
-	free(lst);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (c - 32);
+	}
+	return (c);
 }

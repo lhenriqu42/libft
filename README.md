@@ -17,22 +17,21 @@ The Makefile compiles the code and generates the `libft.a` file, which can be us
    cd libft
    ```
 
-3. Compile the code using Make:
+3. Compile the code using Make build:
    ```bash
-   make
+   make build
    ```
 
 ## How to Use
 
 1. Include the `libft.h` header file in your code:
-   
    ```c
    #include "libft.h"
    ```
    Ensure the libft.h file is in the root of your project directory, or provide its absolute path when including it.
 
 2. Link the `libft.a` file during compilation with your C compiler. For example:
-   ```
+   ```bash
    gcc your_program.c -L. -lft -o your_program
    ```
    Here, -L. specifies the directory containing libft.a (current directory), and -lft links the libft.a library.
