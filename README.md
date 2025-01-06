@@ -9,7 +9,7 @@ The Makefile compiles the code and generates the `libft.a` file, which can be us
 
 1. Clone this repository:
    ```bash
-   git clone http://github.com/lhenriqu42/libft
+   git clone https://github.com/lhenriqu42/libft
    ```
 
 2. Navigate to the repository folder:
