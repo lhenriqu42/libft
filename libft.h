@@ -37,6 +37,9 @@ int		ft_isdigit(int c);
 // Returns 1 if the character is a printable character (32-126)
 int		ft_isprint(int c);
 
+// Returns 1 if the file descriptor is writable (i.e., able to write a byte).
+int		ft_checkw(int fd);
+
 // Returns the lowercase equivalent of a character if it is uppercase
 int		ft_tolower(int c);
 

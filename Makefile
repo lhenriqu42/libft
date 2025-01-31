@@ -24,6 +24,7 @@ LIB_SOURCES = \
 	ft_atol.c \
 	ft_bzero.c \
 	ft_split.c \
+	ft_checkw.c \
 	ft_calloc.c \
 	ft_memset.c \
 	ft_strchr.c \
@@ -56,7 +57,7 @@ LIB_SOURCES = \
 	ft_atoi_base.c \
 	ft_putendl_fd.c \
 	ft_putchar_fd.c \
-	ft_free_matrix.c 
+	ft_free_matrix.c
 
 LIB_OBJECTS = $(addprefix $(LIB_BIN_PATH), $(LIB_SOURCES:%.c=%.o))
 
@@ -87,7 +88,7 @@ PRINTF_BIN_PATH = ./ft_printf/bin/
 PRINTF_SOURCES = \
 	string_functions.c \
 	number_functions.c \
-	ft_printf.c 
+	ft_printf.c
 
 PRINTF_OBJECTS = $(addprefix $(PRINTF_BIN_PATH), $(PRINTF_SOURCES:%.c=%.o))
 
@@ -153,7 +154,7 @@ ft_printf_fd:
 	LIB_SOURCES_PATH="$(PRINTF_FD_SOURCES_PATH)" \
 	LIB_OBJECTS="$(PRINTF_FD_OBJECTS)" \
 	LIB_HEADER_PATH="$(PRINTF_FD_HEADER_PATH)"
-	
+
 clean:
 	@printf "$(RED)[Removing Objects]$(COLOR_LIMITER)\n"
 	@rm -rf $(LIB_BIN_PATH)
