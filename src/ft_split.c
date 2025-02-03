@@ -6,7 +6,7 @@
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 11:29:50 by lhenriqu          #+#    #+#             */
-/*   Updated: 2025/02/03 16:48:44 by lhenriqu         ###   ########.fr       */
+/*   Updated: 2025/02/03 16:53:40 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static char	**fill_matrix(char **matrix, const char *str, char c)
 			matrix[m_word] = (char *)ft_calloc((len + 1), sizeof(char));
 			if (matrix[m_word] == NULL)
 			{
-				ft_free_matrix(matrix, free);
+				ft_free_matrix((void **)matrix, free);
 				return (NULL);
 			}
 			ft_strlcpy(matrix[m_word], str, len + 1);
