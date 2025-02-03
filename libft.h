@@ -121,8 +121,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 // Sets a block of memory to zero
 void	ft_bzero(void *s, size_t n);
 
-// Frees all memory allocated for a matrix (array of strings)
-void	ft_free_matrix(char **matrix);
+// Frees the matrix elements using (*free_func) and then the matrix itself.
+void	ft_free_matrix(void **matrix, void (*free_func)(void *));
 
 // Writes an integer to the specified file descriptor
 void	ft_putnbr_fd(int n, int fd);
