@@ -110,6 +110,22 @@ PRINTF_FD_SOURCES = \
 PRINTF_FD_OBJECTS = $(addprefix $(PRINTF_FD_BIN_PATH), $(PRINTF_FD_SOURCES:%.c=%.o))
 
 # ===========================================================================
+# ============================== HASH_MAP ===================================
+# ===========================================================================
+
+HM_NAME = Hash_Map
+HM_SOURCES_PATH = ./hash_map/src/
+HM_HEADER_PATH = ./hash_map/includes/
+HM_BIN_PATH = ./hash_map/bin/
+
+HM_SOURCES = \
+	ft_hash_table.c \
+	ft_hash_item.c \
+	ft_hash_map.c
+
+HM_OBJECTS = $(addprefix $(HM_BIN_PATH), $(HM_SOURCES:%.c=%.o))
+
+# ===========================================================================
 # ============================= MAIN RULES ==================================
 # ===========================================================================
 
@@ -157,12 +173,21 @@ ft_printf_fd:
 	LIB_OBJECTS="$(PRINTF_FD_OBJECTS)" \
 	LIB_HEADER_PATH="$(PRINTF_FD_HEADER_PATH)"
 
+hash_map:
+	@make --no-print-directory \
+	LIB_NAME="$(HM_NAME)" \
+	LIB_BIN_PATH="$(HM_BIN_PATH)" \
+	LIB_SOURCES_PATH="$(HM_SOURCES_PATH)" \
+	LIB_OBJECTS="$(HM_OBJECTS)" \
+	LIB_HEADER_PATH="$(HM_HEADER_PATH)"
+
 clean:
 	@printf "$(RED)[Removing Objects]$(COLOR_LIMITER)\n"
 	@rm -rf $(LIB_BIN_PATH)
 	@rm -rf $(GNL_BIN_PATH)
 	@rm -rf $(PRINTF_BIN_PATH)
 	@rm -rf $(PRINTF_FD_BIN_PATH)
+	@rm -rf $(HM_BIN_PATH)
 
 fclean: clean
 	@printf "$(RED)[Removing %s]$(COLOR_LIMITER)\n" "$(NAME)"
@@ -175,5 +200,6 @@ build:
 	@make get_next_line --no-print-directory
 	@make ft_printf --no-print-directory
 	@make ft_printf_fd --no-print-directory
+	@make hash_map --no-print-directory
 
-.PHONY: all clean fclean re get_next_line ft_printf ft_printf_fd build
+.PHONY: all clean fclean re get_next_line ft_printf ft_printf_fd hash_map build
