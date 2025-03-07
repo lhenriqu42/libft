@@ -68,6 +68,9 @@ long			ft_atol(const char *str);
 // Converts a string to an integer for a specific base
 int				ft_atoi_base(const char *str, int str_base);
 
+// Compares two strings lexicographically
+int				ft_strcmp(const char *s1, const char *s2);
+
 // Compares two strings lexicographically (up to 'n' characters)
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 
