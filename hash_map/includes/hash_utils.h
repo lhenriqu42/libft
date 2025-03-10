@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hash_table.c                                    :+:      :+:    :+:   */
+/*   hash_utils.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/07 13:31:26 by lhenriqu          #+#    #+#             */
-/*   Updated: 2025/03/10 07:51:46 by lhenriqu         ###   ########.fr       */
+/*   Created: 2025/03/10 07:47:06 by lhenriqu          #+#    #+#             */
+/*   Updated: 2025/03/10 07:52:49 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hash_map.h"
+#ifndef HASH_UTILS_H
+# define HASH_UTILS_H
 
-t_hash_table	*ft_map_create(size_t size)
-{
-	t_hash_table	*table;
+# include "hash_map.h"
 
-	table = ft_calloc(1, sizeof(t_hash_table));
-	if (!table)
-		return (NULL);
-	table->size = ft_next_prime(size);
-	table->items = ft_calloc(table->size, sizeof(t_h_item *));
-	return (table);
-}
+// Create a new item
+t_h_item			*ft_item_create(char *key, char *value);
+
+// Destroy a linked list of items
+void				ft_items_destroy(t_h_item *item);
+
+// free a single item
+void				free_item(t_h_item *item);
+
+#endif

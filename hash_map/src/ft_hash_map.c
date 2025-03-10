@@ -6,11 +6,12 @@
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 11:29:34 by lhenriqu          #+#    #+#             */
-/*   Updated: 2025/03/07 14:30:46 by lhenriqu         ###   ########.fr       */
+/*   Updated: 2025/03/10 07:48:38 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hash_map.h"
+#include "hash_utils.h"
 
 unsigned long int	ft_hash(const char *key, size_t size)
 {
