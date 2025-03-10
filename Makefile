@@ -126,6 +126,20 @@ HM_SOURCES = \
 HM_OBJECTS = $(addprefix $(HM_BIN_PATH), $(HM_SOURCES:%.c=%.o))
 
 # ===========================================================================
+# ========================== GARBAGE COLLECTOR ==============================
+# ===========================================================================
+
+GC_NAME = ft_gc
+GC_SOURCES_PATH = ./ft_gc/src/
+GC_HEADER_PATH = ./ft_gc/includes/
+GC_BIN_PATH = ./ft_gc/bin/
+
+GC_SOURCES = \
+	ft_gc.c
+
+GC_OBJECTS = $(addprefix $(GC_BIN_PATH), $(GC_SOURCES:%.c=%.o))
+
+# ===========================================================================
 # ============================= MAIN RULES ==================================
 # ===========================================================================
 
@@ -181,6 +195,14 @@ hash_map:
 	LIB_OBJECTS="$(HM_OBJECTS)" \
 	LIB_HEADER_PATH="$(HM_HEADER_PATH)"
 
+gc:
+	@make --no-print-directory \
+	LIB_NAME="$(GC_NAME)" \
+	LIB_BIN_PATH="$(GC_BIN_PATH)" \
+	LIB_SOURCES_PATH="$(GC_SOURCES_PATH)" \
+	LIB_OBJECTS="$(GC_OBJECTS)" \
+	LIB_HEADER_PATH="$(GC_HEADER_PATH)"
+
 clean:
 	@printf "$(RED)[Removing Objects]$(COLOR_LIMITER)\n"
 	@rm -rf $(LIB_BIN_PATH)
@@ -188,6 +210,7 @@ clean:
 	@rm -rf $(PRINTF_BIN_PATH)
 	@rm -rf $(PRINTF_FD_BIN_PATH)
 	@rm -rf $(HM_BIN_PATH)
+	@rm -rf $(GC_BIN_PATH)
 
 fclean: clean
 	@printf "$(RED)[Removing %s]$(COLOR_LIMITER)\n" "$(NAME)"
@@ -201,5 +224,6 @@ build:
 	@make ft_printf --no-print-directory
 	@make ft_printf_fd --no-print-directory
 	@make hash_map --no-print-directory
+	@make gc --no-print-directory
 
-.PHONY: all clean fclean re get_next_line ft_printf ft_printf_fd hash_map build
+.PHONY: all clean fclean re get_next_line ft_printf ft_printf_fd hash_map gc build

@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# include "./ft_gc/includes/ft_gc.h"
 # include "./hash_map/includes/hash_map.h"
 # include "./ft_printf/includes/ft_printf.h"
 # include "./get_next_line/includes/get_next_line.h"
