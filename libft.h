@@ -16,17 +16,17 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# include "./ft_gc/includes/ft_gc.h"
-# include "./hash_map/includes/hash_map.h"
-# include "./ft_printf/includes/ft_printf.h"
-# include "./get_next_line/includes/get_next_line.h"
-
 // Boolean type
 typedef enum e_bool
 {
 	FALSE,
 	TRUE
 }	t_bool;
+
+# include "./ft_gc/includes/ft_gc.h"
+# include "./hash_map/includes/hash_map.h"
+# include "./ft_printf/includes/ft_printf.h"
+# include "./get_next_line/includes/get_next_line.h"
 
 // Returns the absolute value of a floating-point number
 float			ft_abs(float number);

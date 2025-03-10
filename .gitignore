@@ -1,5 +1,3 @@
 libft.a
 bin
-ft_printf/bin
-ft_printf_fd/bin
-get_next_line/bin
+**/bin

@@ -6,13 +6,13 @@
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 09:40:14 by lhenriqu          #+#    #+#             */
-/*   Updated: 2025/03/10 10:00:04 by lhenriqu         ###   ########.fr       */
+/*   Updated: 2025/03/10 10:23:21 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_gc.h"
 
-t_ctx	*get_global_ctx(void)
+static t_ctx	*get_global_ctx(void)
 {
 	static t_ctx	g_ctx;
 
