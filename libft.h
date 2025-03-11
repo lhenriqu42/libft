@@ -16,13 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-// Boolean type
-typedef enum e_bool
-{
-	FALSE,
-	TRUE
-}	t_bool;
-
+# include "./ft_bool.h"
 # include "./ft_gc/includes/ft_gc.h"
 # include "./hash_map/includes/hash_map.h"
 # include "./ft_printf/includes/ft_printf.h"

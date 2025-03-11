@@ -6,7 +6,7 @@
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 09:31:00 by lhenriqu          #+#    #+#             */
-/*   Updated: 2025/03/10 10:23:38 by lhenriqu         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:14:13 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_GC_H
 
 # include "../../libft.h"
+# include "../../ft_bool.h"
 
 // Main structure for the garbage collector
 typedef struct s_ctx
