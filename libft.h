@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# include "colors.h"
 # include "./ft_bool.h"
 # include "./ft_gc/includes/ft_gc.h"
 # include "./hash_map/includes/hash_map.h"
