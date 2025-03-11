@@ -52,6 +52,8 @@ LIB_SOURCES = \
 	ft_strtrim.c \
 	ft_tolower.c \
 	ft_toupper.c \
+	ft_realloc.c \
+	ft_recalloc.c \
 	ft_striteri.c \
 	ft_putnbr_fd.c \
 	ft_putstr_fd.c \

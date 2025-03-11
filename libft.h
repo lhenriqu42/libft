@@ -124,6 +124,12 @@ size_t			ft_strlcpy(char *dest, const char *src, size_t d_size);
 // Allocates memory and initializes them to zero
 void			*ft_calloc(size_t n, size_t size);
 
+// Reallocates memory and copies the old content to the new memory block
+void			*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+
+// Reallocates using calloc and copies the old content to the new memory block
+void			*ft_recalloc(void *ptr, size_t old_size, size_t new_size);
+
 // Fills a block of memory with a specific byte value
 void			*ft_memset(void *b, int c, size_t len);
 
