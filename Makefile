@@ -22,6 +22,7 @@ LIB_SOURCES = \
 	ft_itoa.c \
 	ft_atoi.c \
 	ft_atol.c \
+	ft_atost.c \
 	ft_bzero.c \
 	ft_split.c \
 	ft_checkw.c \
