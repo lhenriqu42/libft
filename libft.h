@@ -59,8 +59,11 @@ int				ft_toupper(int c);
 // Converts a string to an integer (base 10)
 int				ft_atoi(const char *str);
 
-// Converts a string to an long integer (base 10)
+// Converts a string to a long integer (base 10)
 long			ft_atol(const char *str);
+
+// Converts a string to a size_t integer (base 10)
+size_t			ft_atost(const char *str);
 
 // Converts a string to an integer for a specific base
 int				ft_atoi_base(const char *str, int str_base);

@@ -6,7 +6,7 @@
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 09:37:33 by lhenriqu          #+#    #+#             */
-/*   Updated: 2025/01/30 16:22:18 by lhenriqu         ###   ########.fr       */
+/*   Updated: 2025/03/11 11:01:55 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ long	ft_atol(const char *str)
 			sign *= -1;
 		str++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 	{
 		num = num * 10 + (*str - '0');
 		str++;

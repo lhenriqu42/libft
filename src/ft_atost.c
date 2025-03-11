@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atost.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 09:37:33 by lhenriqu          #+#    #+#             */
-/*   Updated: 2025/03/11 11:02:03 by lhenriqu         ###   ########.fr       */
+/*   Created: 2025/03/11 10:59:57 by lhenriqu          #+#    #+#             */
+/*   Updated: 2025/03/11 11:01:39 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+size_t	ft_atost(const char *str)
 {
-	int	num;
-	int	sign;
+	size_t num;
+	size_t sign;
 
 	sign = 1;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
