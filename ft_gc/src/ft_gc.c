@@ -6,7 +6,7 @@
 /*   By: lhenriqu <lhenriqu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 09:40:14 by lhenriqu          #+#    #+#             */
-/*   Updated: 2025/03/10 10:23:21 by lhenriqu         ###   ########.fr       */
+/*   Updated: 2025/03/11 10:00:11 by lhenriqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,11 @@ t_bool	ft_gc_add(void *ptr)
 
 	ctx = get_global_ctx();
 	while (ctx->next)
+	{
+		if (ctx->ptr == ptr)
+			return (TRUE);
 		ctx = ctx->next;
+	}
 	ctx->next = ft_calloc(1, sizeof(t_ctx));
 	if (!ctx->next)
 		return (FALSE);
