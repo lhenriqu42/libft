@@ -15,7 +15,7 @@ COLOR_LIMITER = \033[0m
 LIB_NAME = Libft
 LIB_SOURCES_PATH = ./src/
 LIB_HEADER_PATH = ./
-LIB_BIN_PATH = ./bin/
+LIB_BIN_PATH = ./build/
 
 LIB_SOURCES = \
 	ft_abs.c \
@@ -35,6 +35,7 @@ LIB_SOURCES = \
 	ft_substr.c \
 	ft_strlen.c \
 	ft_memcpy.c \
+	ft_strcmp.c \
 	ft_memmove.c \
 	ft_isprime.c \
 	ft_isalnum.c \
@@ -73,7 +74,7 @@ LIB_OBJECTS = $(addprefix $(LIB_BIN_PATH), $(LIB_SOURCES:%.c=%.o))
 GNL_NAME = GNL
 GNL_SOURCES_PATH = ./get_next_line/src/
 GNL_HEADER_PATH = ./get_next_line/includes/
-GNL_BIN_PATH = ./get_next_line/bin/
+GNL_BIN_PATH = ./get_next_line/build/
 
 GNL_SOURCES = \
 	get_next_line_utils.c \
@@ -88,7 +89,7 @@ GNL_OBJECTS = $(addprefix $(GNL_BIN_PATH), $(GNL_SOURCES:%.c=%.o))
 PRINTF_NAME = Printf
 PRINTF_SOURCES_PATH = ./ft_printf/src/
 PRINTF_HEADER_PATH = ./ft_printf/includes/
-PRINTF_BIN_PATH = ./ft_printf/bin/
+PRINTF_BIN_PATH = ./ft_printf/build/
 
 PRINTF_SOURCES = \
 	string_functions.c \
@@ -104,7 +105,7 @@ PRINTF_OBJECTS = $(addprefix $(PRINTF_BIN_PATH), $(PRINTF_SOURCES:%.c=%.o))
 PRINTF_FD_NAME = Printf_fd
 PRINTF_FD_SOURCES_PATH = ./ft_printf_fd/src/
 PRINTF_FD_HEADER_PATH = ./ft_printf_fd/includes/
-PRINTF_FD_BIN_PATH = ./ft_printf_fd/bin/
+PRINTF_FD_BIN_PATH = ./ft_printf_fd/build/
 
 PRINTF_FD_SOURCES = \
 	ft_printf_fd.c \
@@ -119,7 +120,7 @@ PRINTF_FD_OBJECTS = $(addprefix $(PRINTF_FD_BIN_PATH), $(PRINTF_FD_SOURCES:%.c=%
 HM_NAME = Hash_Map
 HM_SOURCES_PATH = ./hash_map/src/
 HM_HEADER_PATH = ./hash_map/includes/
-HM_BIN_PATH = ./hash_map/bin/
+HM_BIN_PATH = ./hash_map/build/
 
 HM_SOURCES = \
 	ft_hash_table.c \
@@ -135,7 +136,7 @@ HM_OBJECTS = $(addprefix $(HM_BIN_PATH), $(HM_SOURCES:%.c=%.o))
 GC_NAME = ft_gc
 GC_SOURCES_PATH = ./ft_gc/src/
 GC_HEADER_PATH = ./ft_gc/includes/
-GC_BIN_PATH = ./ft_gc/bin/
+GC_BIN_PATH = ./ft_gc/build/
 
 GC_SOURCES = \
 	ft_gc.c
