@@ -1,3 +1,6 @@
 libft.a
 bin
 **/bin
+build
+**/build
+.vscode
